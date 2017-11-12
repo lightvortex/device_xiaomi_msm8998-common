@@ -164,6 +164,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 
+
 # Display
 PRODUCT_PACKAGES += \
     gralloc.msm8998 \
@@ -317,7 +318,7 @@ PRODUCT_COPY_FILES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson
+     libjson
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -325,6 +326,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
+    init.safailnet.rc \
     init.target.rc \
     ueventd.qcom.rc
 
