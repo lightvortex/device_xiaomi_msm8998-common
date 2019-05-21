@@ -31,6 +31,7 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
+import android.preference.TwoStatePreference;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
@@ -44,11 +45,13 @@ public class DeviceSettings extends PreferenceActivity implements
         Preference.OnPreferenceChangeListener {
 
     private static final String KEY_CATEGORY_DISPLAY = "display";
+    public static final String KEY_TAPTOWAKE_SWITCH = "taptowake";
     public static final String KEY_VIBSTRENGTH = "vib_strength";
 
     final String KEY_DEVICE_DOZE = "device_doze";
     final String KEY_DEVICE_DOZE_PACKAGE_NAME = "org.lineageos.settings.doze";
 
+    private TwoStatePreference mTapToWakeSwitch;
     private VibratorStrengthPreference mVibratorStrength;
 
     @Override
@@ -66,6 +69,11 @@ public class DeviceSettings extends PreferenceActivity implements
         if (mVibratorStrength != null) {
             mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
         }
+
+        mTapToWakeSwitch = (TwoStatePreference) findPreference(KEY_TAPTOWAKE_SWITCH);
+        mTapToWakeSwitch.setEnabled(TapToWakeSwitch.isSupported());
+        mTapToWakeSwitch.setChecked(TapToWakeSwitch.isCurrentlyEnabled(this));
+        mTapToWakeSwitch.setOnPreferenceChangeListener(new TapToWakeSwitch());
 
         if (!isAppInstalled(KEY_DEVICE_DOZE_PACKAGE_NAME)) {
             PreferenceCategory displayCategory = (PreferenceCategory) findPreference(KEY_CATEGORY_DISPLAY);
