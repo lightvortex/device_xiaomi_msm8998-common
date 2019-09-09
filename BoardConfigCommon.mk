@@ -62,7 +62,7 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive androidboot.veritymode=ei
 TARGET_BOARD_PLATFORM := msm8998
 
 # ANT+
-#BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
+BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Assert
 TARGET_BOARD_INFO_FILE := $(PLATFORM_PATH)/board-info.txt
