@@ -18,20 +18,12 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#include <stdint.h>
+#include <cutils/properties.h>
 #include <string.h>
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-int property_get(const char *key, char *value, const char *default_value);
-#ifdef __cplusplus
-}
-#endif
 
 static inline const char* BtmGetDefaultName()
 {
-    char product_device[92];
+    char product_device[PROPERTY_VALUE_MAX];
     property_get("ro.product.device", product_device, "");
 
     if (strstr(product_device, "chiron"))
@@ -51,4 +43,5 @@ static inline const char* BtmGetDefaultName()
 #define BLE_VND_INCLUDED   TRUE
 // skips conn update at conn completion
 #define BT_CLEAN_TURN_ON_DISABLED 1
+#undef PROPERTY_VALUE_MAX
 #endif
