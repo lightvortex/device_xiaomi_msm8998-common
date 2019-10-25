@@ -21,6 +21,9 @@
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
     <bool name="config_automatic_brightness_available">true</bool>
 
+    <!-- Whether the device has outdated qti-telephony-common.jar -->
+    <bool name="config_oldQtiTelephony">false</bool>
+
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
          that can be set by the user. -->

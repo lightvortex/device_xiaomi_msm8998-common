@@ -245,8 +245,8 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_msm8998
 
 # LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.livedisplay@2.0-service-sdm
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -294,7 +294,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.1-service-qti
+    android.hardware.power@1.2-service-qti
 
 # Properties
 include $(LOCAL_PATH)/vendor_prop.mk
