@@ -184,6 +184,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0
+# adb
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp,adb \
+    persist.service.debuggable=1  \
+    persist.service.adb.enable=1
+    
+#force VOLTE
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.ims.disableUserAgent=0 \
+    persist.radio.calls.on.ims=1
 
 # Wlan
 PRODUCT_PROPERTY_OVERRIDES += \
