@@ -396,6 +396,12 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_EXTRA_VNDK_VERSIONS := 28 29 30
 
+# VNDK
+PRODUCT_PACKAGES += \
+    libdng_sdk.vendor_32 \
+    libstdc++.vendor_32 \
+    vndk-ext
+
 # Wifi
 PRODUCT_PACKAGES += \
     ipacm \
