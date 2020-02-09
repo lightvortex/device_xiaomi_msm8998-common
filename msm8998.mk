@@ -413,7 +413,6 @@ PRODUCT_BOOT_JARS += \
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/msm8998-common/msm8998-common-vendor.mk)
 
-# GApps
-ifneq ($(wildcard vendor/gapps/common/common-vendor.mk),)
-$(eval include vendor/gapps/common/common-vendor.mk)
-endif
+# Wallpapers
+PRODUCT_PACKAGES += \
+    PixelLiveWallpaperPrebuilt
