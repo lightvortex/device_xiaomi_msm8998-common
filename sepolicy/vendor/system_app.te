@@ -1,0 +1,19 @@
+# Parts
+allow system_app sysfs_sectouch:file rwx_file_perms;
+allow system_app sysfs_leds:dir search;
+allow system_app {sysfs_sectouch sysfs_graphics }:dir search;
+allow system_app sysfs_graphics:file rwx_file_perms;
+
+# Spectrum
+allow system_app spectrum_prop:property_service set;
+get_prop(system_app, spectrum_prop);
+
+# Sweep2sleep
+allow system_app sysfs_sts:file rwx_file_perms;
+
+# Kcal
+allow system_app sysfs_kcal:file rwx_file_perms;
+allow system_app sysfs_kcal:dir { search };
+
+# FastCharge
+allow system_app sysfs_fastcharge:file rwx_file_perms;
