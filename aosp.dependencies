@@ -1,0 +1,12 @@
+[
+  {
+    "repository": "android_kernel_xiaomi_msm8998",
+    "target_path": "kernel/xiaomi/msm8998",
+    "branch": "ten"
+  },
+  {
+    "repository" : "vendor_xiaomi",
+    "target_path": "vendor/xiaomi",
+    "branch": "ten"
+  }
+]
