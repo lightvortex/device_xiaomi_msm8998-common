@@ -144,6 +144,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/platform/soc/1da4000.ufshc/by-name/frp
 
+# iwlan vowifi corresponding
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.data.iwlan.enable=true
+    
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
