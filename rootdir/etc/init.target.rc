@@ -253,7 +253,6 @@ on charger
     write /sys/devices/soc/1da4000.ufshc/clkgate_enable 1
 
     start vendor.hvdcp_opti
-    start vendor.thermal-engine
     start vendor.qcom-post-boot
     start vendor.power_off_alarm
 
@@ -281,15 +280,6 @@ on property:sys.shutdown.requested=*
 service vendor.qseecomd /vendor/bin/qseecomd
     class core
     user root
-    group root
-
-service vendor.thermal-engine /vendor/bin/thermal-engine -T
-    class main
-    user root
-    socket thermal-send-client stream 0666 system system
-    socket thermal-recv-client stream 0660 system system
-    socket thermal-recv-passive-client stream 0666 system system
-    socket thermal-send-rule stream 0660 system system
     group root
 
 service vendor.adsprpcd /vendor/bin/adsprpcd
