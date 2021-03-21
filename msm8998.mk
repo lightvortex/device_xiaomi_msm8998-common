@@ -395,7 +395,10 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service
+    vendor.qti.hardware.vibrator.service \
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service \
+    vendor.qti.hardware.vibrator.service.xiaomi_chiron
 
 # Trust HAL
 PRODUCT_PACKAGES += \
