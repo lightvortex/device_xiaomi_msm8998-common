@@ -181,7 +181,6 @@ PRODUCT_PACKAGES += \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor
 
->>>>>>> bf6d33e... msm8998-common: bump vendor.display.config to 2.0
 # Doze
 PRODUCT_PACKAGES += \
     XiaomiDoze
