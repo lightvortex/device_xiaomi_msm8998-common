@@ -24,11 +24,9 @@ EXTRA_VENDOR_LIBRARIES_32 := \
     libft2 \
     libharfbuzz_ng \
     libheif \
-    libicuuc \
     libmedia \
     libmediametrics \
     libmediautils \
-    libmemunreachable \
     libminikin \
     libnblog \
     libsonivox \

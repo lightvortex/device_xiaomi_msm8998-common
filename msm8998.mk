@@ -398,9 +398,12 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 28 29 30
 
 # VNDK
 PRODUCT_PACKAGES += \
+	libicuuc.vendor_32 \
     libdng_sdk.vendor_32 \
     libstdc++.vendor_32 \
     vndk-ext
+
+PRODUCT_EXTRA_VNDK_VERSIONS := 27
 
 # Wifi
 PRODUCT_PACKAGES += \
