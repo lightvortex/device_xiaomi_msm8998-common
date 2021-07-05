@@ -64,6 +64,10 @@ product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 # Camera
 lib/libicuuc.so:vendor/lib/libicuuc-v28.so
 lib/libminikin.so:vendor/lib/libminikin-v28.so
+lib/libaudioclient.so:vendor/lib/libaudioclient-v28.so
+lib/libaudiopolicy.so:vendor/lib/libaudiopolicy-v28.so
+lib/libmedia.so:vendor/lib/libmedia-v28.so
+lib/libheif.so:vendor/lib/libheif-v28.so
 vendor/lib/hw/camera.msm8998.so
 vendor/lib/lib_lowlight.so
 vendor/lib/lib_lowlight_dxo.so

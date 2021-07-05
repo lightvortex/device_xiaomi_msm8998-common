@@ -4,3 +4,4 @@ libqti-perfd-client.so
 libsdsprpc.so
 libprotobuf-cpp-full.so
 libprotobuf-cpp-lite.so
+capture_state_listener-aidl-V1-cpp.so

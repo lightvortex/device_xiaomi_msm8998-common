@@ -15,22 +15,28 @@
 #
 
 EXTRA_VENDOR_LIBRARIES_32 := \
-    libandroidicu \
-    libaudioclient \
-    libaudiomanager \
-    libaudiopolicy \
-    libbinder \
-    libcamera_client \
-    libft2 \
-    libharfbuzz_ng \
-    libheif \
-    libmedia \
-    libmediametrics \
-    libmediautils \
-    libminikin \
-    libnblog \
-    libsonivox \
-    libvibrator
+	android.frameworks.bufferhub@1.0 \
+	libandroidicu \
+	libaudiomanager \
+	libbinder \
+	libbufferhub \
+	libbufferhubqueue \
+	libcamera_client \
+	libft2 \
+	libgui \
+	libharfbuzz_ng \
+	libheif \
+	libinput \
+	libmedia_codeclist \
+	libmediametrics \
+	libmediautils \
+	libminikin \
+	libnblog \
+	libpackagelistparser \
+	libpdx_default_transport \
+	libselinux \
+	libsonivox \
+	libvibrator
 
 EXTRA_VENDOR_LIBRARIES_64 := \
-    libpowermanager
+    libpowermanager 

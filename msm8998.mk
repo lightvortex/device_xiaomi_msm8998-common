@@ -399,11 +399,17 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 28 29 30
 # VNDK
 PRODUCT_PACKAGES += \
 	libicuuc.vendor_32 \
+	libgui.vendor_32 \
+	android.frameworks.bufferhub@1.0.vendor_32 \
+	libinput.vendor_32 \
     libdng_sdk.vendor_32 \
     libstdc++.vendor_32 \
     vndk-ext
 
-PRODUCT_EXTRA_VNDK_VERSIONS := 27
+
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcutils-v29.so \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcutils-v29.so
 
 # Wifi
 PRODUCT_PACKAGES += \
