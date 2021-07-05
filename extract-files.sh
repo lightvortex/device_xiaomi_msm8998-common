@@ -24,7 +24,7 @@ if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
 LINEAGE_ROOT="${MY_DIR}"/../../..
 
-HELPER="${LINEAGE_ROOT}/vendor/aosp/build/tools/extract_utils.sh"
+HELPER="${LINEAGE_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -87,6 +87,7 @@ function blob_fixup() {
         ;;
     vendor/lib/hw/camera.msm8998.so)
         "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
+        "${PATCHELF}" --replace-needed "libaudioclient.so" "libaudioclient-v28.so" "${2}"
         "${PATCHELF}" --replace-needed "libminikin.so" "libminikin-v28.so" "${2}"
         ;;
     vendor/lib/libFaceGrade.so)
@@ -95,12 +96,28 @@ function blob_fixup() {
     vendor/lib/libMiCameraHal.so)
         "${PATCHELF}" --replace-needed "libicuuc.so" "libicuuc-v28.so" "${2}"
         "${PATCHELF}" --replace-needed "libminikin.so" "libminikin-v28.so" "${2}"
+	    "${PATCHELF}" --replace-needed "libheif.so" "libheif-v28.so" "${2}"
+        ;;
+	vendor/lib/libmedia-v28.so)
+	    "${PATCHELF}" --set-soname "libmedia-v28.so" "${2}"
+        "${PATCHELF}" --replace-needed "libaudioclient.so" "libaudioclient-v28.so" "${2}"
         ;;
     vendor/lib/libarcsoft_beauty_shot.so)
         "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
         ;;
     vendor/lib/libicuuc-v28.so)
         "${PATCHELF}" --set-soname "libicuuc-v28.so" "${2}"
+        ;;
+	vendor/lib/libheif-v28.so)
+        "${PATCHELF}" --set-soname "libheif-v28.so" "${2}"
+		"${PATCHELF}" --replace-needed "libmedia.so" "libmedia-v28.so" "${2}"
+        ;;
+	vendor/lib/libaudioclient-v28.so)
+        "${PATCHELF}" --set-soname "libaudioclient-v28.so" "${2}"
+		"${PATCHELF}" --replace-needed "libaudiopolicy.so" "libaudiopolicy-v28.so" "${2}"
+        ;;
+	vendor/lib/libaudiopolicy-v28.so)
+        "${PATCHELF}" --set-soname "libaudiopolicy-v28.so" "${2}"
         ;;
     vendor/lib/libminikin-v28.so)
         "${PATCHELF}" --set-soname "libminikin-v28.so" "${2}"
