@@ -384,6 +384,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
 
+# VNDK
+PRODUCT_EXTRA_VNDK_VERSIONS := 28 29 30
+
 # Wifi
 PRODUCT_PACKAGES += \
     ipacm \
