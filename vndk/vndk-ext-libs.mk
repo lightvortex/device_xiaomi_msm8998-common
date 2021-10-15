@@ -36,7 +36,7 @@ EXTRA_VENDOR_LIBRARIES_32 := \
 	libpdx_default_transport \
 	libselinux \
 	libsonivox \
-	libvibrator
+#	libvibrator
 
 EXTRA_VENDOR_LIBRARIES_64 := \
     libpowermanager 
