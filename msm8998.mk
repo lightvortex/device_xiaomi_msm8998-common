@@ -141,7 +141,8 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-   libstdc++.vendor
+   libstdc++.vendor \
+   libshim_cam
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \

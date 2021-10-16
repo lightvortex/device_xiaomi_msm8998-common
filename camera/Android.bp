@@ -1,0 +1,6 @@
+cc_library_shared {
+    name: "libshim_cam",
+
+    proprietary: true,
+    srcs: ["cam_shim.cpp"],
+}

@@ -133,6 +133,9 @@ function blob_fixup() {
     vendor/lib/libmpbase.so)
         "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
         ;;
+    vendor/bin/mm-qcamera-daemon)
+        "${PATCHELF}" --add-needed "libshim_cam.so" "${2}"
+       ;;
     esac
 }
 
