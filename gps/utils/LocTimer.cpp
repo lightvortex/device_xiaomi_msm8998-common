@@ -35,6 +35,7 @@
 #include <sys/timerfd.h>
 #include <sys/epoll.h>
 #include <log_util.h>
+#include <bits/epoll_event.h>
 #include <loc_timer.h>
 #include <LocTimer.h>
 #include <LocHeap.h>
